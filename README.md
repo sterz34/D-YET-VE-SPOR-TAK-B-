@@ -29,4 +29,6 @@ docker build -t diyet-spor:latest .
 docker run -p 3000:3000 diyet-spor:latest
 ```
 
+<!-- ghcr-publish-trigger: commit to trigger GHCR publish workflow -->
+
 
