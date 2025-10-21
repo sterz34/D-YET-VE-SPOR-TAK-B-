@@ -31,4 +31,29 @@ docker run -p 3000:3000 diyet-spor:latest
 
 <!-- ghcr-publish-trigger: commit to trigger GHCR publish workflow -->
 
+## Kurulum - tek komut (yerel)
+
+Depoyu klonladıktan sonra hızlıca tüm hazırlıkları yapan bir `setup.sh` eklendi. Aşağıdaki komutları çalıştırın:
+
+```bash
+# tek komutla kurulum, test ve kullanım önerisi
+./setup.sh
+```
+
+`setup.sh` şu adımları yapar:
+
+- `npm install` — bağımlılıkları kurar
+- `npm test` — testleri çalıştırır
+
+
+## Docker Compose
+
+Hazır image kullanarak tek komutla çalıştırmak için `docker-compose.yml` dosyası ekledim:
+
+```bash
+docker compose up -d
+docker compose logs -f
+```
+
+
 
