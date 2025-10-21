@@ -1,0 +1,28 @@
+/# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Node
+node_modules/
+
+# Dart/Flutter
+.dart_tool/
+.packages
+.pub/
+build/
+
+# Logs
+*.log
+
+# Misc
+local.properties

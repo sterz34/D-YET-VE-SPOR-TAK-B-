@@ -1,0 +1,11 @@
+{
+  "name": "diyet-ve-spor-takibi",
+  "version": "0.1.0",
+  "description": "Minimal scaffold for Diyet ve Spor Takibi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node -e \"console.log('no tests')\""
+  },
+  "license": "MIT"
+}

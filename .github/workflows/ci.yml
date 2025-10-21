@@ -1,0 +1,19 @@
+name: Repo health check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository files
+        run: |
+          echo "Files in repo:"
+          ls -la
+          echo "Ensuring README.md exists"
+          test -f README.md
