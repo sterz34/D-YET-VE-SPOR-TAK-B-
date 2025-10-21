@@ -1,14 +1,17 @@
-const http = require('http');
+const express = require('express');
+const meals = require('./routes/meals');
+const exercises = require('./routes/exercises');
 
-const server = http.createServer((req, res) => {
-  if (req.url === '/' && req.method === 'GET') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ message: 'Diyet ve Spor Takibi API - hello' }));
-  } else {
-    res.writeHead(404);
-    res.end();
-  }
-});
+const app = express();
+app.use(express.json());
 
-const port = process.env.PORT || 3000;
-server.listen(port, () => console.log(`Server listening on ${port}`));
+app.get('/', (req, res) => res.json({ message: 'Diyet ve Spor Takibi API - hello' }));
+app.use('/meals', meals);
+app.use('/exercises', exercises);
+
+if (require.main === module) {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => console.log(`Server listening on ${port}`));
+}
+
+module.exports = app;

@@ -10,3 +10,23 @@ npm start
 ```
 
 API varsayılan olarak `http://localhost:3000/` adresinde bir JSON selamlama döner.
+
+API uç noktaları (örnek):
+
+- GET / -> selamlama
+- GET /meals -> yemek listesini döner
+- POST /meals { name } -> yeni yemek ekler
+- DELETE /meals/:id -> yemek siler
+- GET /exercises -> egzersiz listesini döner
+- POST /exercises { name } -> yeni egzersiz ekler
+
+## Docker ile çalıştırma
+
+İmajı oluşturup konteyneri çalıştırmak için:
+
+```bash
+docker build -t diyet-spor:latest .
+docker run -p 3000:3000 diyet-spor:latest
+```
+
+
